@@ -1,0 +1,9 @@
+.search{
+    width: 340px;
+    background-color: #EBF2FB;
+    min-height: calc(100vh - 0px);
+}
+.button{
+    display: flex;
+    justify-content: center;
+}

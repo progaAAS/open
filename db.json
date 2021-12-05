@@ -1,0 +1,84 @@
+{
+  "table": [
+    {
+      "id": 1,
+      "meter": 54,
+      "address": "Moscow, Ardat street",
+      "status": "submitted",
+      "owner": "Meg Cartwright",
+      "dataSubmitted": "1635724800000",
+      "projectID": "",
+      "queluePosition": ""
+    },
+    {
+      "id": 2,
+      "meter": 32,
+      "address": "Penza, Moskovskaya street",
+      "status": "incomplete",
+      "owner": "Evan Mraz II",
+      "dataSubmitted": "1635811200000",
+      "projectID": "",
+      "queluePosition": ""
+    },
+    {
+      "id": 3,
+      "meter": 556,
+      "address": "Saransk, Lenina street",
+      "status": "Impact Study",
+      "owner": "Adalberto Nienow",
+      "dataSubmitted": "1635897600000",
+      "projectID": "",
+      "queluePosition": ""
+    },
+    {
+      "id": 4,
+      "meter": 678,
+      "address": "Washington, DC, 955",
+      "status": "Impact Study",
+      "owner": "Dani Cremin",
+      "dataSubmitted": "1635984000000",
+      "projectID": "",
+      "queluePosition": ""
+    },
+    {
+      "id": 5,
+      "meter": 123,
+      "address": "Philadelphia, PA, 647",
+      "status": "incomplete",
+      "owner": "Wiston Lowe",
+      "dataSubmitted": "1636070400000",
+      "projectID": "",
+      "queluePosition": ""
+    },
+    {
+      "id": 6,
+      "meter": 567,
+      "address": "Danbury, CT, 406",
+      "status": "Impact Study",
+      "owner": "Louetta Corkery",
+      "dataSubmitted": "1636156800000",
+      "projectID": "",
+      "queluePosition": ""
+    },
+    {
+      "id": 7,
+      "meter": 789,
+      "address": "Naperville, IL, 1083",
+      "status": "Impact Study",
+      "owner": "Rene Russel",
+      "dataSubmitted": "1636243200000",
+      "projectID": "",
+      "queluePosition": ""
+    },
+    {
+      "id": 8,
+      "meter": 789,
+      "address": "Los Angeles, CA, 792",
+      "status": "incomplete",
+      "owner": "Floy Hyatt",
+      "dataSubmitted": "1636329600000",
+      "projectID": "",
+      "queluePosition": ""
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+.item{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+}
+.itemHeader{
+    display: flex;
+    align-items: center;
+}
+.itemHeader p{
+    font-weight: 900;
+    cursor: pointer;
+}
+.arrow{
+    height: 10px;
+}
+.rotated{
+    transform: rotate(90deg);
+}
+p{
+    margin-left: 5px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+}
+li{
+    list-style-type: none;
+    margin-left: 5px;
+    font-size: 12px;
+    padding: 5px;
+}
+li:hover{
+    border-radius: 30px;
+    background-color: #62467e;
+    color: white;
+    cursor: pointer;
+}
+.active{
+    border-radius: 30px;
+    background-color: #62467e;
+    color: white;
+}
+
+.itemToggle{
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 15px 10px 15px 10px;
+}
+.itemToggleHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.itemToggleHeader p, ul{
+    margin: 0;
+}
+p{
+    font-size: 14px;
+    margin-left: 0;
+}
+
+.greater{
+    color: #62467e;
+    font-weight:normal;
+    font-size: 12px;
+    margin: 20px ​0 20px 0;
+}
+input{
+    padding: 9px 0 7px 8px;
+    font-size: 12px;
+    width: 220px;
+    border: 0;
+    background-color: #c9c8c8;
+    border-radius: 5px;
+}
+.inputBox{
+    display: flex;
+    justify-content: center;
+}
+.delete{
+    position: absolute;
+    height: 20px;
+    transform: translate(500%, 21%);;
+}
+.delete:hover{
+    cursor: pointer;
+}

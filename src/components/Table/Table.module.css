@@ -1,0 +1,33 @@
+
+.table {
+	display: flex;
+    flex-direction: column;
+	border-collapse: separate;
+	box-sizing: border-box;
+	text-indent: initial;
+	border-spacing: 2px;
+	border-color: grey;
+	width: 80%;
+	margin: 0; 
+    border-spacing: 0px;   
+}
+
+
+.table__hight {
+	padding: .75rem;
+    width: 70px
+}
+
+.table__down {
+	padding: .75rem;
+	text-align: center;
+    width: 70px;
+}
+/* .grey {
+    background-color: rgba(128,128,128,.25);
+  } */
+
+.table__row td:nth-child(1),
+.table__row th:nth-child(1) {
+    background-color: rgba(80, 80, 80, 0.582);
+}
