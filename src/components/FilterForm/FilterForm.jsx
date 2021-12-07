@@ -3,7 +3,7 @@ import {ReactComponent as Arrow} from '../../img/arrow.svg';
 import useToggle from 'react-use-toggle';
 import {ReactComponent as Delete} from '../../img/delete.svg';
 import { useDispatch } from "react-redux";
-import { setAddList, setInputChange, setItemDeleteText, setSelectItemFilter, setSelectItemRemoveList } from "../../redux/filter";
+import { setAddList, setInfoForm, setItemDeleteText, setSelectItemRemoveList } from "../../redux/filter";
 
 const FilterForm = ({items, header, placeholder, field, filters, setToggleButton,  toggleButton}) => {
   
@@ -33,7 +33,9 @@ const FilterForm = ({items, header, placeholder, field, filters, setToggleButton
     if(!visibleBtnDelete){
       setVisibleBtnDelete(true);
     }
-    dispatch(setInputChange(e, index));
+    const value = e.target.value;
+    const name = e.target.name;
+    dispatch(setInfoForm({name, value}, index));
   }
 
   const deleteStrChange = (e, index) => {
@@ -43,7 +45,7 @@ const FilterForm = ({items, header, placeholder, field, filters, setToggleButton
   }
 
   const selectItemFilter = (type, index) => {
-    dispatch(setSelectItemFilter(type, index))
+    dispatch(setInfoForm(type, index))
   }
 
   return (
@@ -60,7 +62,7 @@ const FilterForm = ({items, header, placeholder, field, filters, setToggleButton
               <ul>              
                 {items && 
                   items.map((item, index) =>(
-                  <li onClick={()=>{selectItemFilter({item:item.type, name: "item"}, indexfiltre)}}key={`${item}, ${index}`}>{item.name}</li>))}
+                  <li onClick={()=>{selectItemFilter({value:item.type, name: "item"}, indexfiltre)}}key={`${item}, ${index}`}>{item.name}</li>))}
               </ul>
             </div>
             <p className={s.greater}>GREATER</p>

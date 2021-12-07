@@ -8,7 +8,6 @@ import { getTable } from './redux/table';
 
 function App() {
 
-
   const dispatch = useDispatch();
 
   useEffect(() => {
