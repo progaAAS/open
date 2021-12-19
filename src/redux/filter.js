@@ -8,7 +8,7 @@ const filterReduser = (state = initialState, action) => {
         return {...state, filters: [...state.filters, action.payload]};
     }
     case "ADD_INFO_FORM":{         
-        const { name, value } = action.payload.e;        
+        const { name, value } = action.payload.e;     
         return {...state, filters: state.filters.map((filter, i) => i === action.payload.index ? {...filter, [name]: value} : filter)}
     }
     case "ADD_ITEM_DELETE_TEXT":{

@@ -4,16 +4,23 @@ import useToggle from 'react-use-toggle';
 import {ReactComponent as Delete} from '../../img/delete.svg';
 import { useDispatch } from "react-redux";
 import { setAddList, setInfoForm, setItemDeleteText, setSelectItemRemoveList } from "../../redux/filter";
+import React from "react";
+import Input from "../../UI/Input/Input";
+import FilterDate from "../FilterDate/FilterDate";
 
-const FilterForm = ({items, header, placeholder, field, filters, setToggleButton,  toggleButton}) => {
+const FilterForm = React.memo(function FilterForm({header, placeholder, field, items, activeItems, filters, setToggleButton, toggleButton}){
+  
   
   let [visiblePopup, toggleVisiblePopup] = useToggle(false);
   let [visibleBtnDelete, setVisibleBtnDelete] = useToggle(false);
   
   let filter = filters && filters.filter(item => item.field == field);
   let indexfiltre = filters && filters.findIndex(item => item.field == field);
-  
+ // let findItem = filters && filters.find(item => item.field == field).item;
 
+  if(field === "data"){
+    console.log(header);
+  }
   const dispatch = useDispatch();
 
   const Enter = () => {
@@ -45,6 +52,15 @@ const FilterForm = ({items, header, placeholder, field, filters, setToggleButton
   }
 
   const selectItemFilter = (type, index) => {
+    debugger
+    dispatch(setInfoForm(type, index))
+  }
+
+  const selectFilterDate = (type, index) => {
+    debugger
+    if(!toggleButton){
+      setToggleButton(true)
+    }
     dispatch(setInfoForm(type, index))
   }
 
@@ -62,13 +78,14 @@ const FilterForm = ({items, header, placeholder, field, filters, setToggleButton
               <ul>              
                 {items && 
                   items.map((item, index) =>(
-                  <li onClick={()=>{selectItemFilter({value:item.type, name: "item"}, indexfiltre)}}key={`${item}, ${index}`}>{item.name}</li>))}
+                  <li className={activeItems === item.type ? s.active : ""} onClick={()=>{selectItemFilter({value:item.type, name: "item"}, indexfiltre)}} key={`${item}, ${index}`}>{item.name}</li>))}
               </ul>
             </div>
             <p className={s.greater}>GREATER</p>
             <div className={s.inputBox}>
-              <input name="text" value={filter.text} onChange={(e)=> inputChange(e, indexfiltre)} placeholder={placeholder}/>
-              {visibleBtnDelete ? <Delete className={s.delete} onClick={(e)=> deleteStrChange(e, indexfiltre)}/> : null}
+              {field != "data"
+                ? <Input name="text" value={filter.text} inputChange={inputChange} placeholder={placeholder} visibleBtnDelete={visibleBtnDelete} deleteStrChange={deleteStrChange} indexfiltre={indexfiltre}/>
+                : <FilterDate filter={filter} selectFilterDate={selectFilterDate} indexfiltre={indexfiltre}/>}
             </div>
           </div>
           : null
@@ -76,6 +93,6 @@ const FilterForm = ({items, header, placeholder, field, filters, setToggleButton
       </div>
 
   );
-}
+})
 
 export default FilterForm;

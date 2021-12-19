@@ -18,18 +18,32 @@ let initialState = {
  }
 
 export const getTable = (query) => (dispatch) => {
-        let newStr;
-        if(query){
-            const str = []
-            for(let i = 0; i < query.length; i++){                            
-                const str1 = query[i]?.field + query[i]?.item + "=" + query[i]?.text;
+    debugger
+    let newStr;
+    if(query){
+        const str = []
+        const fieldData = query.find(item => item.field === "data");
+        const fieldNoData = query.filter(item => item.field != "data");
+        if(fieldData){                 
+            if(fieldData.item.one){
+                const strTwoData = fieldData.field + fieldData.item.one + "=" + fieldData.text.textDateOne + "&" + fieldData.field + fieldData.item.two + "=" + fieldData.text.textDateTwo
+                str.push(strTwoData);
+            }else{
+                const strOneData = fieldData.field + fieldData.item + "=" + fieldData.text;
+                str.push(strOneData);
+            }
+        }
+        if(fieldNoData){
+            for(let i = 0; i < fieldNoData.length; i++){                            
+                const str1 = fieldNoData[i]?.field + (fieldNoData[i]?.item ? fieldNoData[i]?.item : '') + "=" + fieldNoData[i]?.text;
                 str.push(str1);   
             }
-            newStr = str.join('&');        
+        }
+            newStr = str.join('&');
             debugger
         }
     axios.get(`http://localhost:3008/table?${newStr ? newStr : null}`).then((req, res) =>{
-            dispatch(setTable(req.data));
+        dispatch(setTable(req.data));
     })
 }
 

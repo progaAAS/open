@@ -1,4 +1,77 @@
 {
+  "headers":[
+    {
+      "header":"ID",
+      "placeholder": "Only number",
+      "field":"id",
+      "items": [
+        { "name": "EQUALS", "type": ""},
+        { "name": "NOTEQUALS", "type": "_ne"},
+        { "name": "LESS", "type": "_lte"}
+      ]
+    },
+    {
+      "header":"Meter #",
+      "placeholder": "Meter #",
+      "field":"meter",
+      "items": [
+        { "name": "EQUALS", "type": ""},
+        { "name": "CONTAIN", "type": "_like"},
+        { "name": "NOTCONTAIN", "type": "_ne"}
+      ]
+    },
+    {
+      "header":"Address",
+      "placeholder": "Address",
+      "field":"address",
+      "items": [
+        { "name": "EQUALS", "type": ""},
+        { "name": "CONTAIN", "type": "_like"},
+        { "name": "NOTCONTAIN", "type": "_ne"}
+      ]
+    },
+    {
+      "header":"Status",
+      "placeholder": "Status",
+      "field":"status",
+      "items": [
+        { "name": "EQUALS", "type": ""},
+        { "name": "CONTAIN", "type": "_like"},
+        { "name": "NOTCONTAIN", "type": "_ne"}
+      ]
+    },
+    {
+      "header":"Owner",
+      "placeholder": "Owner",
+      "field":"owner",
+      "items": [
+        { "name": "EQUALS", "type": ""},
+        { "name": "CONTAIN", "type": "_like"},
+        { "name": "NOTCONTAIN", "type": "_ne"}
+      ]
+    },
+    {
+      "header":"Data Submitted",
+      "placeholder": "Data Submitted",
+      "field":"data",
+      "items": [
+        { "name": "EQUALS", "type": ""},
+        { "name": "BEFORE", "type": "_lt"},
+        { "name": "AFTER", "type": "_gt"},
+        { "name": "BETWEEN", "type": {"one": "_gte", "two": "_lte"}}
+      ]
+    },
+    {
+      "header":"ProjectID",
+      "placeholder": "Project ID",
+      "field":"projectId",
+      "items": [
+        { "name": "EQUALS", "type": ""},
+        { "name": "CONTAIN", "type": "_like"},
+        { "name": "NOTCONTAIN", "type": "_ne"}
+      ]
+    }
+  ],
   "table": [
     {
       "id": 1,
@@ -6,7 +79,7 @@
       "address": "Moscow, Ardat street",
       "status": "submitted",
       "owner": "Meg Cartwright",
-      "dataSubmitted": "1635724800000",
+      "data": "01.11.2021",
       "projectID": "",
       "queluePosition": ""
     },
@@ -16,7 +89,7 @@
       "address": "Penza, Moskovskaya street",
       "status": "incomplete",
       "owner": "Evan Mraz II",
-      "dataSubmitted": "1635811200000",
+      "data": "02.11.2021",
       "projectID": "",
       "queluePosition": ""
     },
@@ -26,7 +99,7 @@
       "address": "Saransk, Lenina street",
       "status": "Impact Study",
       "owner": "Adalberto Nienow",
-      "dataSubmitted": "1635897600000",
+      "data": "03.11.2021",
       "projectID": "",
       "queluePosition": ""
     },
@@ -36,7 +109,7 @@
       "address": "Washington, DC, 955",
       "status": "Impact Study",
       "owner": "Dani Cremin",
-      "dataSubmitted": "1635984000000",
+      "data": "04.11.2021",
       "projectID": "",
       "queluePosition": ""
     },
@@ -46,7 +119,7 @@
       "address": "Philadelphia, PA, 647",
       "status": "incomplete",
       "owner": "Wiston Lowe",
-      "dataSubmitted": "1636070400000",
+      "data": "05.11.2021",
       "projectID": "",
       "queluePosition": ""
     },
@@ -56,7 +129,7 @@
       "address": "Danbury, CT, 406",
       "status": "Impact Study",
       "owner": "Louetta Corkery",
-      "dataSubmitted": "1636156800000",
+      "data": "06.11.2021",
       "projectID": "",
       "queluePosition": ""
     },
@@ -66,7 +139,7 @@
       "address": "Naperville, IL, 1083",
       "status": "Impact Study",
       "owner": "Rene Russel",
-      "dataSubmitted": "1636243200000",
+      "data": "07.11.2021",
       "projectID": "",
       "queluePosition": ""
     },
@@ -76,7 +149,7 @@
       "address": "Los Angeles, CA, 792",
       "status": "incomplete",
       "owner": "Floy Hyatt",
-      "dataSubmitted": "1636329600000",
+      "data": "08.11.2021",
       "projectID": "",
       "queluePosition": ""
     }

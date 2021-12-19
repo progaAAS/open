@@ -1,0 +1,8 @@
+.delete{
+  position: absolute;
+  height: 20px;
+  transform: translate(500%, 21%);;
+}
+.delete:hover{
+  cursor: pointer;
+}

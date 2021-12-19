@@ -6,11 +6,17 @@ const Table = () => {
 
   const items = useSelector(state => state.table.items); 
 
-  const convertDate = (startDate) => {
-   // var date = new Date(startDate);
-    var formattedDate = format(new Date(), "yyyy-MM-dd");
-	return formattedDate;
-  }
+//   const convertDate = (msec) => {
+//     const options = {
+//       year: "numeric",
+//       month: "numeric",
+//       day: "numeric",
+//     };
+//     const d = new Date(Number(msec));
+//     return d.toLocaleDateString("ru", options);
+//   };
+
+
   return (
 		<table className={s.table}>
 			<thead className={s.table__head}>
@@ -33,7 +39,7 @@ const Table = () => {
 						<td className={s.table__down}>{user.address}</td>
 						<td className={s.table__down}>{user.status}</td>
             			<td className={s.table__down}>{user.owner}</td>
-						<td className={s.table__down}>{convertDate(user.dataSubmitted)}</td>
+						<td className={s.table__down}>{user.data}</td>
 						<td className={s.table__down}>{user.projectID}</td>
 						<td className={s.table__down}>{user.queluePosition}</td>
 					</tr>

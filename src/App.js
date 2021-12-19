@@ -2,9 +2,10 @@
 import Search from './components/Search/Search';
 import Table from './components/Table/Table';
 import s from "./App.module.css";
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { getTable } from './redux/table';
+import { getHeaders } from './redux/headers';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getTable())
+    dispatch(getHeaders())
   }, []);
   return (
     <div className={s.App}>
